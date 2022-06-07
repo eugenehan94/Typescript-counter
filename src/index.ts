@@ -1,26 +1,67 @@
-const value = document.querySelector("#value");
-const increase = document.querySelector(".increase")
-const reset = document.querySelector(".reset")
-const decrease = document.querySelector(".decrease")
-let count=0
+const value = document.querySelector<Element>("#value");
+const increase = document.querySelector<Element>(".increase")
+const increaseTen = document.querySelector<Element>(".increase-ten")
+const increaseTwenty = document.querySelector<Element>(".increase-twenty")
+const increaseThirty = document.querySelector<Element>(".increase-thirty")
+const reset = document.querySelector<Element>(".reset")
+const decrease = document.querySelector<Element>(".decrease")
+const decreaseTen = document.querySelector<Element>(".decrease-ten")
+const decreaseTwenty = document.querySelector<Element>(".decrease-twenty");
+let count = 0
 
-console.log(value)
 increase?.addEventListener("click", (e)=> {
-  console.log(e.currentTarget)
   count++
-  console.log(count)
+  if (value != undefined){
+    value.textContent = String(count)
+  }
 })
 
 decrease?.addEventListener("click", ()=> {
   count--
+  if (value != undefined){
+    value.textContent = String(count)
+  }
 })
 
 reset?.addEventListener("click", () => {
-  count === 0
+  count= 0
+  if (value != undefined){
+    value.textContent = String(count)
+  }
 })
 
-if (value != undefined){
-  value.textContent = count.toString()  
-}
+increaseTen?.addEventListener("click", () => {
+  count += 10
+  if (value !=undefined){
+    value.textContent = String(count)
+  }
+})
 
+decreaseTen?.addEventListener("click", () => {
+  count -=10
+  if(value != undefined){
+    value.textContent = String(count)
+  }
+})
+
+increaseTwenty?.addEventListener("click", () => {
+  count += 20
+  if (value != undefined){
+    value.textContent = String(count)
+  }
+})
+
+decreaseTwenty?.addEventListener("click", () => {
+  count -=20
+  if(value != undefined){
+    value.textContent = String(count)
+  }
+})
+
+increaseThirty?.addEventListener("click", () => {
+  count += 30
+  if (value != undefined){
+    value.textContent = String(count)
+  }
+})
 export {}

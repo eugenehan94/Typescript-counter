@@ -1,1 +1,13 @@
+main {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.value-wrapper{
+  margin-bottom: 10px
+}
 
+.increase, .reset, .decrease, .increase-ten, .decrease-ten, .increase-twenty, .decrease-twenty {
+  text-transform: uppercase;
+  padding: 0.375rem 0.75rem;
+}
